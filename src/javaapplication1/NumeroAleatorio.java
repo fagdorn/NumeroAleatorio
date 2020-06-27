@@ -16,28 +16,28 @@ public class NumeroAleatorio {
         
         Scanner tec = new Scanner(System.in);
         System.out.println("Tente acertar o número aleatório!");
-        Random random = new Random ();
-        int numero = random.nextInt(10);
+
+        int numAleatorio = new Random().nextInt(10);
         
         int tentativas = 1;
-        int Aposta;
+        int numAposta;
         do{
             System.out.print(tentativas +"º"+" tentativa: ");
-            Aposta = tec.nextInt();
+            numAposta = tec.nextInt();
             tentativas++;
-            if (Aposta == numero){
-                System.out.println("Parabéns, você acertou!"+ numero);
+            if (numAposta == numAleatorio){
+                System.out.println("Parabéns, você acertou!"+ numAleatorio);
                 break;
             } else {
-                if (Aposta > numero)
+                if (numAposta > numAleatorio)
                     System.out.println("O número é menor que o informado...");
                 else
                     System.out.println("O número é maior que o informado...");
             }
         }while (tentativas <= 3);
        
-        if (Aposta != numero)
-            System.out.println("Você fracassou! O número era: "+numero);
+        if (numAposta != numAleatorio)
+            System.out.println("Você fracassou! O número era: "+numAleatorio);
 
     }
     
